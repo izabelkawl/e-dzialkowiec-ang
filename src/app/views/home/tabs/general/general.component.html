@@ -1,0 +1,29 @@
+<div class="backgroud">
+  <img
+    [src]="
+      './assets/img/' + (basicMode ? 'home-basic' : 'home-barbie') + '.svg'
+    "
+    alt="logo-text"
+  />
+</div>
+<div class="home-page">
+  <img
+    class="home-page--logo"
+    src="./assets/img/logo-text.svg"
+    alt="logo-text"
+  />
+  <p
+    class="home-page--header"
+    [innerText]="translatePrefix + 'header' | translate"
+  ></p>
+  <p
+    class="home-page--description"
+    [innerText]="translatePrefix + 'description' | translate"
+  ></p>
+  <button class="home-page--button" routerLink="/login">
+    <span [innerText]="translatePrefix + 'joinUs' | translate"></span>
+  </button>
+  <div class="home-page--footer">
+    <p [innerHTML]="translatePrefix + 'copyright' | translate"></p>
+  </div>
+</div>

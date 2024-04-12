@@ -1,0 +1,36 @@
+{
+  "home": {
+    "general": "Strona główna",
+    "management": "Zarząd",
+    "garden": "Plan ogrodu",
+    "contact": "Kontakt",
+    "barbie": "Barbie",
+    "default": "Domyślny"
+  },
+  "general": {
+    "header": "Kupno * Sprzedaż * Opłaty * Aktualności * Tablica ogłoszeń",
+    "description": "Aplikacja pozwoli Ci zarządzać swoim ogrodem działkowym na odległość. Możesz kupić lub sprzedać działkę, zintegrować się z działkowacami, zobaczyć aktualne opłaty. To wszystko bez wychodzenia z domu!",
+    "copyright": "Copyright © IW <a href=\"http://www.freepik.com\">BG Designed by Freepik",
+    "joinUs": "Dołącz do nas"
+  },
+  "loginRegister": {
+    "login": "Zaloguj",
+    "register": "Zarejestruj",
+    "createAccount": "Stwórz konto",
+    "dontHaveAccountMessage": "* Nie masz konta? Zarejestruj się.",
+    "form": {
+      "email": "Adres email",
+      "password": "Hasło",
+      "firtsName": "Imię",
+      "lastName": "Nazwisko",
+      "passwordCopy": "Powtórz Hasło",
+      "placeholder": {
+        "email": "Wpisz email",
+        "password": "Wpisz hasło",
+        "firtsName": "Wpisz imię",
+        "lastName": "Wpisz nazwisko",
+        "passwordCopy": "Wpisz hasło"
+      }
+    }
+  }
+}

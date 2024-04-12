@@ -1,0 +1,8 @@
+@import "./../../../../assets/scss/variables";
+
+.btn {
+  &.mat-mdc-unelevated-button:not(:disabled) {
+    background-color: $basic-color;
+    border-radius: $radius;
+  }
+}

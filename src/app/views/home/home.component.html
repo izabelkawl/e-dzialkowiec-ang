@@ -1,0 +1,29 @@
+<div class="home">
+  <div class="home-nav">
+    <ul>
+      @for (key of navConfig; track i; let i = $index) {
+        <li>
+          <a [routerLink]="i ? '/' + key : ''">
+            {{ "home." + key | translate }}</a
+          >
+        </li>
+      }
+    </ul>
+    <div>
+      <app-button
+        [title]="langTitle | uppercase"
+        (click)="changeLang()"
+        class="me-2 green-rounded"
+      />
+      <app-button
+        [title]="(basic ? 'home.barbie' : 'home.default') | translate"
+        (click)="changeColor()"
+        class="me-2"
+      />
+      <img class="home-logo" src="./assets/img/logo.png" alt="logo" />
+    </div>
+  </div>
+  <div class="home-router">
+    <router-outlet />
+  </div>
+</div>

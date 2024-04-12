@@ -1,0 +1,37 @@
+{
+  "home": {
+    "general": "Home",
+    "management": "Management",
+    "garden": "Garden Plan",
+    "contact": "Contact",
+    "barbie": "Barbie",
+    "default": "Default"
+  },
+  "general": {
+    "header": "Buy * Sell * Fees * News * Bulletin Board",
+    "description": "The application allows you to manage your allotment garden remotely. You can buy or sell a plot, integrate with fellow gardeners, view current fees. All of this without leaving your home!",
+    "copyright": "Copyright © IW <a href=\"http://www.freepik.com\">BG Designed by Freepik",
+
+    "joinUs": "Join Us"
+  },
+  "loginRegister": {
+    "login": "Login",
+    "register": "Register",
+    "createAccount": "Create Account",
+    "dontHaveAccountMessage": "* Don't have an account? Register.",
+    "form": {
+      "email": "Email Address",
+      "password": "Password",
+      "firtsName": "First Name",
+      "lastName": "Last Name",
+      "passwordCopy": "Repeat Password",
+      "placeholder": {
+        "email": "Enter email",
+        "password": "Enter password",
+        "firtsName": "Enter first name",
+        "lastName": "Enter last name",
+        "passwordCopy": "Enter password"
+      }
+    }
+  }
+}

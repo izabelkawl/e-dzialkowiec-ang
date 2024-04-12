@@ -1,0 +1,46 @@
+@use "./../../../assets/scss/variables";
+@use "./../../../assets/scss/buttons";
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  padding: 3rem 6rem;
+  box-sizing: border-box;
+
+  .home-nav {
+    display: flex;
+    justify-content: space-between;
+    height: 10%;
+
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: baseline;
+      gap: 5rem;
+      padding: 0;
+
+      li {
+        border: none;
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        &:last-child {
+          @extend .blue-rounded;
+        }
+      }
+    }
+  }
+
+  .home-router {
+    height: 90%;
+  }
+
+  &-logo {
+    width: auto;
+    height: 60px;
+  }
+}

@@ -1,0 +1,39 @@
+<div class="login-component">
+  @if (form) {
+    <form [formGroup]="form">
+      <h2 class="login-component--header">
+        {{
+          translatePrefix.common + (pageTypeLogin ? "login" : "createAccount")
+            | translate
+        }}
+      </h2>
+
+      @for (field of formConfig; track $index) {
+        <app-input
+          [placeholder]="
+            translatePrefix.placeholder + field.formControlName | translate
+          "
+          [label]="translatePrefix.form + field.formControlName | translate"
+          [formControlName]="field.formControlName"
+          [type]="field.type ?? 'text'"
+          ngDefaultControl
+        />
+      }
+      @if (pageTypeLogin) {
+        <p>
+          <a [routerLink]="'/register'">{{
+            translatePrefix.common + "dontHaveAccountMessage" | translate
+          }}</a>
+        </p>
+      }
+    </form>
+    <app-button
+      class="login-component--submit"
+      [title]="
+        translatePrefix.common + (pageTypeLogin ? 'login' : 'register')
+          | translate
+      "
+      (click)="submitForm()"
+    />
+  }
+</div>

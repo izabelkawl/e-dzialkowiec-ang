@@ -1,0 +1,17 @@
+.login-component {
+  width: max-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  margin-left: 4rem;
+
+  &--header {
+    margin-bottom: 2rem;
+  }
+
+  &--submit {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
