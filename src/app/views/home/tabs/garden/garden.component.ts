@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SvgService } from 'src/app/shared/svg/svg.service';
+import { SvgService } from '@shared/svg/svg.service';
 
 @Component({
   selector: 'app-garden',

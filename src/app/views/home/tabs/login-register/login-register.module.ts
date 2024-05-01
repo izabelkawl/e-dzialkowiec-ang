@@ -2,10 +2,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { LoginRegisterComponent } from './login-register.component';
-import { InputComponent } from 'src/app/shared/components/input/input.component';
-import { ButtonComponent } from 'src/app/shared/components/button/button.component';
+import { InputComponent } from '@shared/components/input/input.component';
+import { ButtonComponent } from '@shared/components/button/button.component';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { AuthService } from '@shared/services/auth/auth.service';
 
 @NgModule({
   declarations: [LoginRegisterComponent],
@@ -19,5 +20,6 @@ import { TranslateModule } from '@ngx-translate/core';
     TranslateModule,
   ],
   exports: [],
+  providers: [AuthService],
 })
 export class LoginRegisterModule {}

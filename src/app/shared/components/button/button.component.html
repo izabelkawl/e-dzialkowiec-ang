@@ -1,1 +1,7 @@
-<button class="btn" mat-flat-button color="primary">{{ title }}</button>
+<button
+  [ngClass]="['default', buttonClassName]"
+  mat-flat-button
+  color="primary"
+  [innerText]="title"
+  [disabled]="disabled"
+></button>

@@ -1,8 +1,21 @@
 @import "./../../../../assets/scss/variables";
+@import "./../../../../assets/scss/buttons";
 
-.btn {
+.default {
+  &.mat-mdc-unelevated-button {
+    border-radius: $radius;
+  }
   &.mat-mdc-unelevated-button:not(:disabled) {
     background-color: $basic-color;
     border-radius: $radius;
+  }
+}
+
+.green-rounded {
+  &.mat-mdc-unelevated-button {
+    border-radius: $radius;
+  }
+  &.mat-mdc-unelevated-button:not(:disabled) {
+    background-color: $green-color;
   }
 }

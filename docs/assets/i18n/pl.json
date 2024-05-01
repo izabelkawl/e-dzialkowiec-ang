@@ -32,5 +32,13 @@
         "passwordCopy": "Wpisz hasło"
       }
     }
+  },
+  "management": {
+    "news": "Aktualności",
+    "managementInfo": "Zarządzenia",
+    "composition": "Skład"
+  },
+  "userPanel": {
+    "logout": "Wyloguj"
   }
 }

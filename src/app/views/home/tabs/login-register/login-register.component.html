@@ -29,6 +29,7 @@
     </form>
     <app-button
       class="login-component--submit"
+      [disabled]="!pageTypeLogin"
       [title]="
         translatePrefix.common + (pageTypeLogin ? 'login' : 'register')
           | translate

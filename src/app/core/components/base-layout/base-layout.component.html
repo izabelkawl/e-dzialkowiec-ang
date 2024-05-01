@@ -1,1 +1,5 @@
-<app-home />
+@if (!logged) {
+  <app-home />
+} @else {
+  <app-user-panel />
+}

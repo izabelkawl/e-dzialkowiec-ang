@@ -1,20 +1,15 @@
 @import "./variables";
 
-.blue-rounded {
+.blue-rounded-element {
   border: none;
   padding: 1rem 2rem;
   background-color: $basic-color;
   border-radius: $radius;
   width: max-content;
-
+  color: white;
+  
   * {
     text-decoration: none;
     color: white;
-  }
-}
-
-.green-rounded {
-  .btn.mat-mdc-unelevated-button[_ngcontent-ng-c442526171]:not(:disabled) {
-    background-color: $green-color;
   }
 }

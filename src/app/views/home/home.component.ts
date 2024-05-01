@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { TabTypes } from './models/home.models';
-import { LangService } from 'src/app/shared/lang/lang.service';
+import { LangService } from '@shared/lang/lang.service';
 import { HomeService } from './services/home.service';
 
 @Component({

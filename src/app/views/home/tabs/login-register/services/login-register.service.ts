@@ -1,14 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Observable, from } from 'rxjs';
-import { fakeAuthService } from '../../../../http-client/auth-service';
-import { ILoginRegisterFormConfig } from './login-register.models';
+import { ILoginRegisterFormConfig } from '../models/login-register.models';
 
 @Injectable()
 export class LoginRegisterService {
-  login(userName: string, password: string): Observable<any> {
-    return from(fakeAuthService(userName, password));
-  }
-
   get loginForm(): ILoginRegisterFormConfig[] {
     return [
       {

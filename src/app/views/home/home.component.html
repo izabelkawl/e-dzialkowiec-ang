@@ -1,7 +1,7 @@
 <div class="home">
   <div class="home-nav">
     <ul>
-      @for (key of navConfig; track i; let i = $index) {
+      @for (key of navConfig; track i; let i = $index; let last = $last) {
         <li>
           <a [routerLink]="i ? '/' + key : ''">
             {{ "home." + key | translate }}</a
@@ -13,12 +13,12 @@
       <app-button
         [title]="langTitle | uppercase"
         (click)="changeLang()"
-        class="me-2 green-rounded"
+        [buttonClassName]="'me-2 green-rounded'"
       />
       <app-button
         [title]="(basic ? 'home.barbie' : 'home.default') | translate"
         (click)="changeColor()"
-        class="me-2"
+        buttonClassName="me-2"
       />
       <img class="home-logo" src="./assets/img/logo.png" alt="logo" />
     </div>

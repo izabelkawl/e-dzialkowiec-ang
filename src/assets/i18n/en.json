@@ -11,7 +11,6 @@
     "header": "Buy * Sell * Fees * News * Bulletin Board",
     "description": "The application allows you to manage your allotment garden remotely. You can buy or sell a plot, integrate with fellow gardeners, view current fees. All of this without leaving your home!",
     "copyright": "Copyright © IW <a href=\"http://www.freepik.com\">BG Designed by Freepik",
-
     "joinUs": "Join Us"
   },
   "loginRegister": {
@@ -33,5 +32,13 @@
         "passwordCopy": "Enter password"
       }
     }
+  },
+  "management": {
+    "news": "News",
+    "managementInfo": "Management info",
+    "composition": "Composition"
+  },
+  "userPanel": {
+    "logout": "Logout"
   }
 }

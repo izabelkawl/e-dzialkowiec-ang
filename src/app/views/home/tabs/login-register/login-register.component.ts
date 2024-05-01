@@ -1,14 +1,14 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { LoginRegisterService } from './login-register.service';
-import { tap } from 'rxjs';
+import { LoginRegisterService } from './services/login-register.service';
 import { Router } from '@angular/router';
+import { AuthService } from '@shared/services/auth/auth.service';
 import {
   ILoginForm,
   ILoginRegisterFormConfig,
   IRegisterForm,
   PageType,
-} from './login-register.models';
+} from './models/login-register.models';
 
 @Component({
   selector: 'app-login-register',
@@ -17,6 +17,7 @@ import {
 })
 export class LoginRegisterComponent implements OnInit {
   #router = inject(Router);
+  #authService = inject(AuthService);
 
   pageType: PageType = 'login';
 
@@ -28,7 +29,7 @@ export class LoginRegisterComponent implements OnInit {
     common: 'loginRegister.',
     form: 'loginRegister.form.',
     placeholder: 'loginRegister.form.placeholder.',
-  }
+  };
 
   constructor(private loginRegisterService: LoginRegisterService) {
     this.pageType = this.#router.url.split('/').pop() as PageType;
@@ -56,14 +57,9 @@ export class LoginRegisterComponent implements OnInit {
   submitForm(): void {
     if (this.form) {
       const { email, password } = this.form.value;
-      this.loginRegisterService
-        .login(email, password)
-        .pipe(
-          tap((data) => {
-            alert('Zalogowano');
-          })
-        )
-        .subscribe();
+      this.#authService.login({ email, password }).then((data) => {
+        console.log(data);
+      });
     }
   }
 

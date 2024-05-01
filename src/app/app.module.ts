@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { BaseLayoutModule } from './core/components/base-layout/base-layout.module';
+import { BaseLayoutModule } from '@core/components/base-layout/base-layout.module';
 
 @NgModule({
   declarations: [AppComponent],

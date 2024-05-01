@@ -1,0 +1,9 @@
+@for (tab of tabsConfig; track i; let i = $index) {
+  <app-button
+    (click)="changeTabIndex(i)"
+    [title]="'management.' + tab.title | translate"
+    [buttonClassName]="'px-4 me-3 mb-5 green-rounded'"
+  />
+}
+
+<ng-container *ngComponentOutlet="tabsConfig[activeTablIndex].component" />

@@ -1,12 +1,15 @@
-export function fakeAuthService(login: string, password: string): Promise<any> {
+import { AuthenticationRequest } from '@shared/services/auth/auth.models';
+
+export function fakeAuthService(
+  credentials: AuthenticationRequest,
+): Promise<any> {
+  const { email, password } = credentials;
   const base = {
     users: [
       {
-        login: 'izaw',
+        email: 'izaw',
         password: 'izaw',
-        token:
-          'https://jwt.io/#debugger-io?token=eyJhbGVnIjoiSFMzODQiLCJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJsb2dpbiI6Iml6YWJlbGthIiwibmFtZSI6Iml6YXcgaXphdyIsImFkbWluIjp0cnVlLCJpYXQiOjE1MTYyMzkwMjJ9.3PPGANjBZ2Jw_ogx1zFUtlpQFxpzAg_Qqx1iWAilcwU',
-        name: 'user1234',
+        jwt: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml6YXdAZ21haWwuY29tIiwibmFtZSI6Ikl6YSIsImxhc3ROYW1lIjoiV2tvIiwicm9sZSI6IkdBUkRFTkVSIiwiaWF0IjoxNTE2MjM5MDIyfQ.0iODIxZnhANoud-Op8S3oySXxdBefY8UjxecYHVwjzo',
       },
     ],
   };
@@ -14,14 +17,13 @@ export function fakeAuthService(login: string, password: string): Promise<any> {
   return new Promise((resolve, reject) => {
     const { users } = base;
     const hasUser = users.find(
-      (user) => user.login === login && user.password === password
+      (user) => user.email === email && user.password === password,
     );
 
     if (hasUser) {
-      const { password, login, ...rest } = hasUser;
-      resolve(rest);
+      const { jwt } = hasUser;
+      resolve({ jwt });
     } else {
-      alert('Zły login lub hasło')
       reject(new Error('Error 401'));
     }
   });

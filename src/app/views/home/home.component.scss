@@ -29,7 +29,7 @@
         }
 
         &:last-child {
-          @extend .blue-rounded;
+          @extend .blue-rounded-element;
         }
       }
     }
