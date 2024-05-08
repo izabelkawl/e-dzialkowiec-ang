@@ -1,6 +1,12 @@
 <form>
   <mat-form-field>
     <mat-label>{{ label }}</mat-label>
-    <input matInput [placeholder]="placeholder" [value]="value" [type]="type" />
+    <input
+      matInput
+      [placeholder]="placeholder"
+      [type]="type"
+      [(ngModel)]="value"
+      [ngModelOptions]="{ standalone: true }"
+    />
   </mat-form-field>
 </form>

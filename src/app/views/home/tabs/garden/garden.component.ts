@@ -20,6 +20,8 @@ export class GardenComponent implements OnInit {
       // color changed menager
       const doc = new DOMParser().parseFromString(svg, 'application/xml');
       const div = document.getElementById('garden');
+      console.log(doc);
+      
       div?.appendChild(div.ownerDocument.importNode(doc.documentElement, true));
     });
   }
