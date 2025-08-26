@@ -1,6 +1,6 @@
 @use "./../../../../../assets/scss/global-styles";
 
-.backgroud {    
+.backgroud {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -13,19 +13,19 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  width: 35vw;
+  width: 40vw;
   height: 100%;
 
   &--logo {
-    width: 40vw;
+    width: 420px;
     height: auto;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
   }
 
   &--header {
     font-weight: bold;
-    padding-bottom: 2rem;
-    font-size: 36px;
+    padding-bottom: 1rem;
+    font-size: 20px;
   }
 
   &--button {
@@ -35,7 +35,7 @@
   &--description {
     line-height: 2;
     font-size: 15px;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     text-align: justify;
   }
 
@@ -43,4 +43,7 @@
     padding-top: 3rem;
     line-height: 2;
   }
+}
+
+@media only screen and (min-width: 1367px) {
 }

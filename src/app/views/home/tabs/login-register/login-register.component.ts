@@ -26,12 +26,6 @@ export class LoginRegisterComponent implements OnInit {
 
   formConfig: ILoginRegisterFormConfig[] = [];
 
-  translatePrefix = {
-    common: 'loginRegister.',
-    form: 'loginRegister.form.',
-    placeholder: 'loginRegister.form.placeholder.',
-  };
-
   constructor(private loginRegisterService: LoginRegisterService) {
     this.pageType = this.#router.url.split('/').pop() as PageType;
   }

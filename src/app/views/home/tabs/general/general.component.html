@@ -15,18 +15,18 @@
   />
   <p
     class="home-page--header"
-    [innerText]="translatePrefix + 'header' | translate"
+    [innerText]="'general.header' | translate"
   ></p>
   <p
     class="home-page--description"
-    [innerText]="translatePrefix + 'description' | translate"
+    [innerText]="'general.description' | translate"
   ></p>
   <app-button
     class="home-page--button"
     routerLink="/login"
-    [innerText]="translatePrefix + 'joinUs' | translate"
+    [innerText]="'general.joinUs' | translate"
   />
   <div class="home-page--footer">
-    <p [innerHTML]="translatePrefix + 'copyright' | translate"></p>
+    <p [innerText]="'general.copyright' | translate"></p>
   </div>
 </div>

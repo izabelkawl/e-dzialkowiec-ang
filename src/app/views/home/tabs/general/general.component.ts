@@ -13,8 +13,6 @@ import { tap } from 'rxjs';
 export class GeneralComponent implements OnInit {
   #homeService = inject(HomeService);
 
-  translatePrefix = 'general.';
-
   basicMode = true;
 
   ngOnInit(): void {
