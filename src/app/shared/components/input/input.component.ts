@@ -7,18 +7,17 @@ import {
 import { MatInputModule, MatLabel } from '@angular/material/input';
 
 @Component({
-  selector: 'app-input',
-  standalone: true,
-  imports: [MatInputModule, MatLabel, FormsModule],
-  templateUrl: './input.component.html',
-  styleUrl: './input.component.scss',
-  providers: [
-    {
-      provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => InputComponent),
-      multi: true,
-    },
-  ],
+    selector: 'app-input',
+    imports: [MatInputModule, MatLabel, FormsModule],
+    templateUrl: './input.component.html',
+    styleUrl: './input.component.scss',
+    providers: [
+        {
+            provide: NG_VALUE_ACCESSOR,
+            useExisting: forwardRef(() => InputComponent),
+            multi: true,
+        },
+    ]
 })
 export class InputComponent implements ControlValueAccessor {
   @Input() placeholder: string = '';

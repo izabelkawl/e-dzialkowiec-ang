@@ -4,9 +4,10 @@ import { LangService } from '@shared/lang/lang.service';
 import { HomeService } from './services/home.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    standalone: false
 })
 export class HomeComponent {
   #langService = inject(LangService);

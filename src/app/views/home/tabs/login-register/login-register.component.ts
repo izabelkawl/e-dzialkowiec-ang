@@ -11,9 +11,10 @@ import {
 } from './models/login-register.models';
 
 @Component({
-  selector: 'app-login-register',
-  templateUrl: './login-register.component.html',
-  styleUrl: './login-register.component.scss',
+    selector: 'app-login-register',
+    templateUrl: './login-register.component.html',
+    styleUrl: './login-register.component.scss',
+    standalone: false
 })
 export class LoginRegisterComponent implements OnInit {
   #router = inject(Router);

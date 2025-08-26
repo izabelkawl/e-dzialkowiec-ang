@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { SvgService } from '@shared/svg/svg.service';
 
 @Component({
-  selector: 'app-garden',
-  templateUrl: './garden.component.html',
-  styleUrl: './garden.component.scss',
+    selector: 'app-garden',
+    templateUrl: './garden.component.html',
+    styleUrl: './garden.component.scss',
+    standalone: false
 })
 export class GardenComponent implements OnInit {
   constructor(private svgService: SvgService) {}

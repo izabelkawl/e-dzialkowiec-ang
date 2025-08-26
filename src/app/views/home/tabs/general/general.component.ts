@@ -5,11 +5,10 @@ import { HomeService } from '../../services/home.service';
 import { tap } from 'rxjs';
 
 @Component({
-  selector: 'app-general',
-  standalone: true,
-  imports: [TranslateModule, RouterModule],
-  templateUrl: './general.component.html',
-  styleUrl: './general.component.scss',
+    selector: 'app-general',
+    imports: [TranslateModule, RouterModule],
+    templateUrl: './general.component.html',
+    styleUrl: './general.component.scss'
 })
 export class GeneralComponent implements OnInit {
   #homeService = inject(HomeService);

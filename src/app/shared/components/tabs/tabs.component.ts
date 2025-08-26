@@ -5,11 +5,10 @@ import { CommonModule } from '@angular/common';
 import { ITab } from './models/tabs.models';
 
 @Component({
-  selector: 'app-tabs',
-  standalone: true,
-  imports: [CommonModule, TranslateModule, ButtonComponent],
-  templateUrl: './tabs.component.html',
-  styleUrl: './tabs.component.scss',
+    selector: 'app-tabs',
+    imports: [CommonModule, TranslateModule, ButtonComponent],
+    templateUrl: './tabs.component.html',
+    styleUrl: './tabs.component.scss'
 })
 export class TabsComponent {
   @Input() tabsConfig: ITab[] = [];

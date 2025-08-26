@@ -3,9 +3,10 @@ import { AuthService } from '@shared/services/auth/auth.service';
 import { tap } from 'rxjs';
 
 @Component({
-  selector: 'app-base-layout',
-  templateUrl: './base-layout.component.html',
-  styleUrl: './base-layout.component.scss',
+    selector: 'app-base-layout',
+    templateUrl: './base-layout.component.html',
+    styleUrl: './base-layout.component.scss',
+    standalone: false
 })
 export class BaseLayoutComponent implements OnInit {
   #authServie = inject(AuthService);
